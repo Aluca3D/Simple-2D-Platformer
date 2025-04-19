@@ -1,0 +1,56 @@
+[gd_scene load_steps=5 format=4 uid="uid://6mk8dwlt6jt3"]
+
+[ext_resource type="Texture2D" uid="uid://bbgw7cxsfk6pf" path="res://Assets/Sprites/TestTiles.png" id="1_mklqt"]
+[ext_resource type="PackedScene" uid="uid://0oiiytk08umy" path="res://Assets/Scenes/Entitys/Player/player.tscn" id="2_ludvw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ludvw"]
+texture = ExtResource("1_mklqt")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:4/0 = 0
+2:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_lj6jo"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_ludvw")
+
+[node name="TestArea" type="Node2D"]
+
+[node name="TileMaps" type="Node2D" parent="."]
+
+[node name="Ground" type="TileMapLayer" parent="TileMaps"]
+use_parent_material = true
+position = Vector2(-2, 0)
+tile_map_data = PackedByteArray("AAD/////AAABAAEAAAAAAP//AAABAAEAAAABAP//AAABAAEAAAACAP//AAABAAIAAAD+////AAABAAEAAAD+/wAAAAABAAIAAAD//wAAAAABAAIAAAAAAAAAAAABAAIAAAABAAAAAAABAAIAAAACAAAAAAABAAIAAAD9////AAAAAAEAAAADAP//AAACAAEAAAD9/wAAAAAAAAIAAAADAAAAAAACAAIAAAD9/wEAAAAAAAMAAAD+/wEAAAABAAMAAAD//wEAAAABAAMAAAAAAAEAAAABAAMAAAABAAEAAAABAAMAAAACAAEAAAABAAMAAAADAAEAAAACAAMAAAACAP7/AAADAAAAAAD9//v/AAAAAAQAAAD+//v/AAABAAQAAAD///v/AAACAAQAAAAFAP3/AAAAAAQAAAAGAP3/AAABAAQAAAAHAP3/AAACAAQAAAA=")
+tile_set = SubResource("TileSet_lj6jo")
+
+[node name="Player" parent="." instance=ExtResource("2_ludvw")]
+position = Vector2(-39, -33)
