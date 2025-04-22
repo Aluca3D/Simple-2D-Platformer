@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbgw7cxsfk6pf"
-path="res://.godot/imported/TestTiles.png-94ea0eec05ad8f0f5ec71e02aaf1afd3.ctex"
+uid="uid://cbeyugdeyn0io"
+path="res://.godot/imported/testing_one_way.png-a0ceefa984b0d5bf7c3b8e7f418ef16c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/TestTiles.png"
-dest_files=["res://.godot/imported/TestTiles.png-94ea0eec05ad8f0f5ec71e02aaf1afd3.ctex"]
+source_file="res://Assets/Sprites/testing_one_way.png"
+dest_files=["res://.godot/imported/testing_one_way.png-a0ceefa984b0d5bf7c3b8e7f418ef16c.ctex"]
 
 [params]
 
