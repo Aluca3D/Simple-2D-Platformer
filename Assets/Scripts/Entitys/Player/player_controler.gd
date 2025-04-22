@@ -3,10 +3,22 @@ class_name PlayerController
 
 @export var SPEED = 3.0
 @export var JUMP_POWER = 8.0
+@export var standing: CollisionShape2D
 
 var speed_multiplier = 30
 var jump_multiplier = -30
 var direction = 0
+var can_standup = false
+var is_sneaking = false
+
+func _on_body_body_entered(body: Node2D) -> void:
+	can_standup = false
+
+func _on_body_body_exited(body: Node2D) -> void:
+	can_standup = true
+
+func get_is_sneaking() -> bool:
+	return is_sneaking
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -25,4 +37,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED * speed_multiplier)
 
+	## Todo: Fix sneak stuck
+	# sneaking 
+	if Input.is_action_pressed("sneak"):
+		standing.set_deferred("disabled", true)
+		is_sneaking = true
+
+	elif can_standup:
+		standing.set_deferred("disabled", false)
+		is_sneaking = false
+		
 	move_and_slide()
