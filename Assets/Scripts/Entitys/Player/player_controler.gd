@@ -1,15 +1,15 @@
 extends CharacterBody2D
 class_name PlayerController
 
-@export var SPEED = 4.0
-@export var JUMP_POWER = 8.5
+@export var SPEED: float = 4.0
+@export var JUMP_POWER: float = 8.5
 @export var standing: CollisionShape2D
 
-var speed_multiplier = 30
-var jump_multiplier = -30
-var direction = 0
-var can_standup = true
-var is_sneaking = false
+var speed_multiplier: int = 30
+var jump_multiplier: int = -30
+var direction: int = 0
+var can_standup: bool = true
+var is_sneaking: bool = false
 
 func _on_body_body_entered(body: Node2D) -> void:
 	if body.get_class() == "TileMapLayer":
